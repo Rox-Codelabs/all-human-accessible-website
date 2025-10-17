@@ -30,7 +30,7 @@
         <p>Explore ideas, experiments, and methods from Human Values for Smarter Cities, and see how designers keep human values at the heart of smart technology.</p>
     </section>
 
-    <form class="filter-section" action="/filter-experiments">
+    <form aria-label="Selecteer hieronder alle gewenste filters" class="filter-section" action="/filter-experiments"> <!--aria-label overbodig?-->
         <h2>
             <svg width="0.6rem" height="0.6rem" viewBox="0 0 24 24">
                 <line x1="0" y1="0" x2="24" y2="24" stroke="black" stroke-width="2"/>
@@ -39,9 +39,9 @@
             Filters
         </h2>
 
-        <button type="reset">Clear all</button>
+        <button aria-label="knop om alle geselecteerde filters weg te halen" type="reset">Clear all</button> <!--aria-label overbodig?-->
         <hr>
-        <fieldset>
+        <fieldset aria-label="Selecteer het type uitwerking">
             <legend>Execution</legend>
 
             <input type="checkbox" id="concept" name="Execution" value="concept"/>
@@ -54,7 +54,7 @@
             <label for="methode">Methode</label><br>
         </fieldset>
 
-        <fieldset>
+        <fieldset aria-label="Selecteer het participatieniveau">
             <legend>Participation level</legend>
 
             <input type="checkbox" id="transparency" name="Participationlevel" value="transparency"/>
@@ -73,7 +73,7 @@
             <label for="contestable">Contestable</label><br>
         </fieldset>
 
-        <fieldset>
+        <fieldset aria-label="Selecteer de participatiestap">
             <legend>Process step</legend>
 
             <input type="checkbox" id="evaluating" name="Processstep" value="evaluating"/>
@@ -231,7 +231,7 @@
                 </section> 
             </article>
 
-            <button>Show more articles</button>
+            <button>Show more articles</button> <!--geen aria-label nodig want text is genoeg-->
         </section>
     </main>
     
@@ -239,9 +239,9 @@
         <section class="community-section">
             <h4>Join our community</h4>
             <hr>
-            <form>
-                <label for="subscribe">Subscribe to our newsletter</label>
-                <input type="email" value="" name="email" placeholder="email address"  required>
+            <form aria-label="Vul je email in om je in te schrijven voor de nieuwsletter">
+                <label for="email">Subscribe to our newsletter</label>
+                <input id="email" type="email" value="" name="email" placeholder="email address"  required>
                 <input type="submit" value="Subscribe" name="subscribe">  
             </form>
         </section>
@@ -249,7 +249,7 @@
         <section class="link-section">
             <h4>Links</h4>
             <hr>
-            <nav class="links">
+            <nav aria-label="links navigation" class="links">
                 <ul>
                     <li><a href="https://civicinteractiondesign.com/projects/">Research projects</a></li>
                     <li><a href="https://civicinteractiondesign.com/">Civic interaction design</a></li>
