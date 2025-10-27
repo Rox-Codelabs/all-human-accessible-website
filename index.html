@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +8,26 @@
 </head>
 <body>
     <header>
-        <nav class="menu-mobile">
+        <nav aria-label="menu navigatie" class="menu-mobile">
             <img src="./assets/logo.png" alt="logo van het Civic Interaction Design">
             <button aria-label="Open menu" aria-expanded="false" onclick="showMenuMobile()">
                 <svg class="icon-open"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
             </button>
             <ul>
-                <li><a href="https://humanvaluesforsmartercities.nl//content_types/updates">News & Updates</a></li>
-                <li><a href="https://humanvaluesforsmartercities.nl//content_types/events">Events</a></li>
-                <li><a href="https://humanvaluesforsmartercities.nl//content_types/academic-output">Academic Output</a></li>
-                <li><a href="https://humanvaluesforsmartercities.nl//content_types/professional-output"></a>Professional Output</li>
-                <li><a href="https://humanvaluesforsmartercities.nl//content_types/probes-prototypes"></a>Prototypes</li>
-                <li><a href="https://humanvaluesforsmartercities.nl//content_types/student-projects"></a>Student Projects</li>
+                <li><a href="https://humanvaluesforsmartercities.nl//content_types/updates">Nieuws & Updates</a></li>
+                <li><a href="https://humanvaluesforsmartercities.nl//content_types/events">Evenementen</a></li>
+                <li><a href="https://humanvaluesforsmartercities.nl//content_types/academic-output">Academische publicaties</a></li>
+                <li><a href="https://humanvaluesforsmartercities.nl//content_types/professional-output"></a>Professionele prestaties</li>
+                <li><a href="https://humanvaluesforsmartercities.nl//content_types/probes-prototypes"></a>Prototypen</li>
+                <li><a href="https://humanvaluesforsmartercities.nl//content_types/student-projects"></a>Studenten Projecten</li>
             </ul>
         </nav>
     </header>
 
 
     <section class="hero-section">
-        <h1>Step into the world of image recognition</h1>
-        <p>Explore ideas, experiments, and methods from Human Values for Smarter Cities, and see how designers keep human values at the heart of smart technology.</p>
+        <h1>Stap in de wereld van beeldherkenning.</h1>
+        <p>Verken ideeën, experimenten en methoden uit Human Values for Smarter Cities, en ontdek hoe ontwerpers menselijke waarden centraal houden in slimme technologie.</p>
     </section>
 
     <form aria-label="Selecteer hieronder alle gewenste filters" class="filter-section" action="/filter-experiments"> <!--aria-label overbodig?-->
@@ -35,14 +35,14 @@
             <svg width="0.6rem" height="0.6rem" viewBox="0 0 24 24">
                 <line x1="0" y1="0" x2="24" y2="24" stroke="black" stroke-width="2"/>
                 <line x1="24" y1="0" x2="0" y2="24" stroke="black" stroke-width="2"/>
-            </svg>
+            </svg><!--nog niet accessible omdat het nog niet af is-->
             Filters
         </h2>
 
         <button aria-label="knop om alle geselecteerde filters weg te halen" type="reset">Clear all</button> <!--aria-label overbodig?-->
         <hr>
         <fieldset aria-label="Selecteer het type uitwerking">
-            <legend>Execution</legend>
+            <legend>Uitvoering</legend>
 
             <input type="checkbox" id="concept" name="Execution" value="concept"/>
             <label for="concept">Concept</label><br>
@@ -58,35 +58,35 @@
             <legend>Participation level</legend>
 
             <input type="checkbox" id="transparency" name="Participationlevel" value="transparency"/>
-            <label for="transparency">Transparency</label><br>
+            <label for="transparency">Transparantie</label><br>
 
             <input type="checkbox" id="actionable" name="Participationlevel" value="actionable"/>
-            <label for="actionable">Actionable</label><br>
+            <label for="actionable">Toepasbaar</label><br>
 
             <input type="checkbox" id="legible" name="Participationlevel" value="legible"/>
-            <label for="legible">legible</label><br>
+            <label for="legible">Leesbaar</label><br>
 
             <input type="checkbox" id="relatable" name="Participationlevel" value="relatable"/>
-            <label for="relatable">Relatable</label><br>
+            <label for="relatable">Herkenbaar</label><br>
             
             <input type="checkbox" id="contestable" name="Participationlevel" value="contestable"/>
-            <label for="contestable">Contestable</label><br>
+            <label for="contestable">Betwistbaar</label><br>
         </fieldset>
 
         <fieldset aria-label="Selecteer de participatiestap">
-            <legend>Process step</legend>
+            <legend>Processtap</legend>
 
             <input type="checkbox" id="evaluating" name="Processstep" value="evaluating"/>
-            <label for="evaluating">Evaluating</label><br>
+            <label for="evaluating">Evalueren</label><br>
 
             <input type="checkbox" id="deployment" name="Processstep" value="deployment"/>
-            <label for="deployment">Deployment</label><br>
+            <label for="deployment">Implementatie</label><br>
 
             <input type="checkbox" id="articulating" name="Processstep" value="articulating"/>
-            <label for="articulating">Articulating</label><br>
+            <label for="articulating">Articuleren</label><br>
 
             <input type="checkbox" id="making" name="Processstep" value="making"/>
-            <label for="making">Making</label><br>
+            <label for="making">Maken</label><br>
         </fieldset>
     </form> 
     
@@ -96,15 +96,15 @@
             <article data-category="evaluating transparency concept" class="concept-card">
                 <img src="./assets/article-img/#1.png" alt="Een minimalistische lijntekening van een computerscherm met een stijgende grafiek, met een toetsenbord en muis ernaast.">
                 <ul class="tags">
-                    <li class="evaluating">Evaluating</li>
-                    <li class="transparency">Transparency</li>
+                    <li class="evaluating">Evalueren</li>
+                    <li class="transparency">Transparantie</li>
                     <li class="concept">Concept</li>
                 </ul>
                 <section class="article-text">
-                    <h3>Making statistics openly available</h3>
-                    <p>What if we unlocked that hidden data—letting everyone see?</p>
-                    <a href="./pages/concept-1.html">Read more</a>
-                    <a href="#">Case study</a> 
+                    <h3>Statistieken openbaar maken</h3>
+                    <p>Wat als we die verborgen gegevens zouden vrijgeven—zodat iedereen ze kan bekijken?</p>
+                    <a href="./pages/concept-1.html">Lees verder</a>
+                    <a href="#">Casestudy</a> 
                 </section>
             </article>
 
@@ -112,15 +112,15 @@
             <article data-category="deployment actionable concept" class="concept-card">
                 <img src="./assets/article-img/#2.png" alt="Een lijntekening van een auto en een smartphone, met spraakballonnen erboven waarin een parkeerbord met de letter P en een vraagteken staan.">
                 <ul class="tags">
-                    <li class="deployment">Deployment</li>
-                    <li class="actionable">Actionable</li>
+                    <li class="deployment">Implementatie</li>
+                    <li class="actionable">Toepasbaar</li>
                     <li class="concept">Concept</li>
                 </ul>
                 <section class="article-text">
-                    <h3>Talk to the enforcer</h3>
-                    <p>What if digital enforcers became a helpdesk instead of just waiting for photos?</p>
-                    <a href="./pages/concept-2.html">Read more</a>
-                    <a href="#">Case study</a>
+                    <h3>Praat met de handhaver</h3>
+                    <p>Wat als digitale handhavers een helpdesk zouden worden in plaats van alleen maar te wachten op foto’s?</p>
+                    <a href="./pages/concept-2.html">Lees verder</a>
+                    <a href="#">Casestudy</a>
                 </section>
             </article>
 
@@ -128,16 +128,16 @@
             <article data-category="deployment legible concept experiment" class="concept-card">
                 <img src="./assets/article-img/#3.png" alt="Een lijntekening van een auto met een camera boven op het dak die gebruikt wordt voor beeldherkenning. De camera flitst.">
                 <ul class="tags">
-                    <li class="deployment">Deployment</li>
-                    <li class="legible">legible</li>
+                    <li class="deployment">Implementatie</li>
+                    <li class="legible">Leesbaar</li>
                     <li class="concept">Concept</li>
                     <li class="experiment">Experiment</li>
                 </ul>
                 <section class="article-text">
-                    <h3>Making the invisible visible</h3>
-                    <p>What if cameras clearly signaled the exact moment they snapped a photo?</p>
-                    <a href="./pages/concept-3.html">Read more</a>
-                    <a href="#">Case study</a> 
+                    <h3>Het onzichtbare zichtbaar maken</h3>
+                    <p>Wat als camera’s duidelijk het exacte moment zouden aangeven waarop ze een foto maken?</p>
+                    <a href="./pages/concept-3.html">Lees verder</a>
+                    <a href="#">Casestudy</a> 
                 </section>
             </article>
 
@@ -145,15 +145,15 @@
             <article data-category="deployment legible concept" class="concept-card">
                 <img src="./assets/article-img/#4.png" alt="Een lijntekening van een auto met een camera boven op het dak die gebruikt wordt voor beeldherkenning.">
                 <ul class="tags">
-                    <li class="deployment">Deployment</li>
-                    <li class="legible">legible</li>
+                    <li class="deployment">Implementatie</li>
+                    <li class="legible">Leesbaar</li>
                     <li class="concept">Concept</li>
                 </ul>
                 <section class="article-text">
-                    <h3>The eye of the scan car</h3>
-                    <p>What if scan car cameras were visible, not hidden, making the ‘all-seeing eye’ transparent?</p>
-                    <a href="./pages/concept-4.html">Read more</a>
-                    <a href="#">Case study</a>  
+                    <h3>Het oog van de scanwagen</h3>
+                    <p>Wat als de camera’s van de scanwagen zichtbaar zouden zijn in plaats van verborgen, waardoor het ‘allesziende oog’ transparant wordt?</p>
+                    <a href="./pages/concept-4.html">Lees verder</a>
+                    <a href="#">Casestudy</a>  
                 </section>
             </article>
 
@@ -161,17 +161,17 @@
             <article data-category="articulating relatable concept experiment methode" class="concept-card">
                 <img src="./assets/article-img/#5.jpg" alt="Twee mensen staan voor een raam en praten met een vrouw die aan de andere kant van het raam staat. Naast het raam hangt een infographic over de stad, waarover ze in gesprek zijn.">
                 <ul class="tags">
-                    <li class="articulating">Articulating</li>
-                    <li class="relatable">Relatable</li>
+                    <li class="articulating">Articuleren</li>
+                    <li class="relatable">Herkenbaar</li>
                     <li class="concept">Concept</li>
                     <li class="experiment">Experiment</li>
                     <li class="methode">Methode</li>
                 </ul>
                 <section class="article-text">
-                    <h3>A digital model of the city</h3>
-                    <p>What if a digital model made invisible technology tangible for residents?</p>
-                    <a href="./pages/concept-5.html">Read more</a>
-                    <a href="#">Case study</a>
+                    <h3>Een digitaal model van de stad</h3>
+                    <p>Wat als een digitaal model onzichtbare technologie tastbaar zou maken voor de bewoners?</p>
+                    <a href="./pages/concept-5.html">Lees verder</a>
+                    <a href="#">Casestudy</a>
                 </section>
                 
             </article>
@@ -180,17 +180,17 @@
             <article data-category="making contestable concept experiment methode" class="concept-card">
                 <img src="./assets/article-img/#6.jpg" alt="Op een fietspad bij een stoplicht staat een persoon met een fiets waarop een beeldherkenningsapparaat is bevestigd. De jas van deze persoon geeft duidelijk aan dat zij een fietsers-expert is met een beeldherkenningsapparaat. Ze praat met een andere fietser die ook bij het stoplicht wacht en beantwoordt zijn vragen over de beeldherkenningsfiets.">
                 <ul class="tags">
-                    <li class="making">Making</li>
-                    <li class="contestable">Contestable</li>
+                    <li class="making">Maken</li>
+                    <li class="contestable">Betwistbaar</li>
                     <li class="concept">Concept</li>
                     <li class="experiment">Experiment</li>
                     <li class="methode">Methode</li>
                 </ul>
                 <section class="article-text">
-                    <h3>Hit the streets!</h3>
-                    <p>What if early mock-ups hit the streets—sparking feedback that shapes design and opens new perspectives?</p>
-                    <a href="./pages/concept-6.html">Read more</a>
-                    <a href="#">Case study</a>  
+                    <h3>De straat op!</h3>
+                    <p>Wat als vroege prototypes de straat op gaan—waardoor feedback het ontwerp beïnvloedt en nieuwe perspectieven opent?</p>
+                    <a href="./pages/concept-6.html">Lees verder</a>
+                    <a href="#">Casestudy</a>  
                 </section>
                 
             </article>
@@ -199,17 +199,17 @@
             <article data-category="actionable contestable concept experiment methode" class="concept-card">
                 <img src="./assets/article-img/#7.jpg" alt="Bovenaanzicht van mensen rondom een tafel. Op de tafel liggen kaartjes met waarden en maatschappelijke onderwerpen, bedoeld om de deelnemers met elkaar in discussie te brengen.">
                 <ul class="tags">
-                    <li class="articulating">Articulating</li>
-                    <li class="contestable">Contestable</li>
+                    <li class="articulating">Articuleren</li>
+                    <li class="contestable">Betwistbaar</li>
                     <li class="concept">Concept</li>
                     <li class="experiment">Experiment</li>
                     <li class="methode">Methode</li>
                 </ul>
                 <section class="article-text">
-                    <h3>Values on the table</h3>
-                    <p>What if residents could hold public values in their hands—using value cards to judge tech proposals?</p>
-                    <a href="./pages/concept-7.html">Read more</a>
-                    <a href="#">Case study</a>  
+                    <h3>Waarden op tafel</h3>
+                    <p>Wat als bewoners publieke waarden letterlijk in handen konden houden—en met waardekaarten technologische voorstellen konden beoordelen?</p>
+                    <a href="./pages/concept-7.html">Lees verder</a>
+                    <a href="#">Casestudy</a>  
                 </section>
             </article>
 
@@ -217,37 +217,37 @@
             <article data-category="making actionable concept experiment methode" class="concept-card">
                 <img src="./assets/article-img/#8.jpg" alt="Een auto met open achterklep, met twee mensen erachter. In de achterbak staan twee bakken waarin mensen hun feedback of commentaar kunnen achterlaten.">
                 <ul class="tags">
-                    <li class="making">Making</li>
-                    <li class="actionable">Actionable</li>
+                    <li class="making">Maken</li>
+                    <li class="actionable">Toepasbaar</li>
                     <li class="concept">Concept</li>
                     <li class="experiment">Experiment</li>
                     <li class="methode">Methode</li>
                 </ul>
                 <section class="article-text">
                     <h3>The human scale in the algorithm</h3>
-                    <p>What if citizens could weigh in—through quizzes or feedback loops—on whether a fine is truly fair?</p>
-                    <a href="./pages/concept-8.html">Read more</a>
-                    <a href="#">Case study</a> 
+                    <p>Wat als burgers konden meewegen—via quizzen of feedbackrondes—of een boete echt eerlijk is?</p>
+                    <a href="./pages/concept-8.html">Lees verder</a>
+                    <a href="#">Casestudy</a> 
                 </section> 
             </article>
 
-            <button>Show more articles</button> <!--geen aria-label nodig want text is genoeg-->
+            <button>Meer artikelen tonen</button> <!--geen aria-label nodig want text is genoeg-->
         </section>
     </main>
     
     <footer>
         <section class="community-section">
-            <h4>Join our community</h4>
+            <h4>Word lid van onze community</h4>
             <hr>
             <form aria-label="Vul je email in om je in te schrijven voor de nieuwsletter">
-                <label for="email">Subscribe to our newsletter</label>
+                <label for="email">Abonneer je op onze nieuwsbrief</label>
                 <input id="email" type="email" value="" name="email" placeholder="email address"  required>
                 <input type="submit" value="Subscribe" name="subscribe">  
             </form>
         </section>
 
         <section class="link-section">
-            <h4>Links</h4>
+            <h4>Linkjes</h4>
             <hr>
             <nav aria-label="links navigation" class="links">
                 <ul>
@@ -261,7 +261,7 @@
         <section class="contact-section">
             <h4>Contact</h4>
             <address>
-                Jorgen Karskens | Project manager
+                Jorgen Karskens | Projectmanager
                 <a href="mailto:j.r.karskens[at]hva.nl">j.r.karskens[at]hva.nl</a>
             </address>
         </section>
