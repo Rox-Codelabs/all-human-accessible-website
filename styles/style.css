@@ -34,7 +34,6 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 1rem 2.5rem;
-    position: relative;
 
     img{
         height: 3rem;
@@ -89,7 +88,13 @@ header{
 
 /*==========================================================hero==========================================================================*/
 .hero-section{
+    margin: 3rem 0;
     padding: 6vw;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
     h1{
         font-family: var(--fontfamily-h1);
         font-size: 4rem;
@@ -97,10 +102,41 @@ header{
         background-color: var(--color-lightblue);
         line-height: 1.4;
         text-transform: uppercase;
-        border-radius: 1rem;
         display: block;
         padding: 1rem 2rem;
-        
+        flex-basis: 100%;
+        border-radius: 1rem;
+    }
+    img{
+        position: absolute;
+        top: 18vh;/*dit kan beter bijvoorbeld div om h1 en img*/
+        right: 12vw;
+        width: 10vw;
+    }
+    p:first-of-type{
+        color: var(--color-white);
+        background-color: var(--color-black);
+        line-height: 1.4rem;
+        flex: 1.5;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;font-family: var(--fontfamily-h1);
+        font-weight: 600;
+        padding: 2rem;
+    }
+    p:last-of-type{
+        flex: 1;
+        color: var(--color-white);
+        border-radius: 1rem;
+        border: 0.4rem solid var(--color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        word-spacing: 4rem;
     }
 }
 
@@ -224,7 +260,6 @@ header{
         align-items: stretch;
         min-height: 300px;
         position: relative;
-
         img{
             width: 100%;
             object-fit: cover;
@@ -233,7 +268,6 @@ header{
             display: block;
             border-radius: 5px 5px 0 0;
         }
-
         ul{
             position: absolute;
             top: 1rem;
@@ -244,7 +278,6 @@ header{
             flex-wrap: wrap;
             gap: 0.5rem;
             opacity: 0;
-
             li{
                 color: var(--color-white);
                 border: solid black 0.1rem;
@@ -308,11 +341,8 @@ header{
                     background-color: var(--color-beige);
                     color: var(--color-black);
                 } 
-        }
-        }
-
-        
-        
+            }
+        }   
     }
     button{
         background: none;
@@ -324,57 +354,82 @@ header{
 
 /*==========================================================Footer=========================================================================*/
 footer{
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10rem;
-   
+    background-color: #43748F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    font-family: var(--fontfamily-h1);
+    font-size: 1rem;
+    margin-top: 15rem;
     hr{
         width: 100%;
         max-width: 80vw; 
         margin: auto;
-        background-color: var(--color-black);
-        
+        color: var(--color-black);
+        margin-bottom: 1.5rem;
     } 
 
     h4{
-        font-family: var(--fontfamily-h4);
+        font-family: var(--fontfamily-h1);
+        font-size: 1.2rem;
     }
 
     .community-section{
-        form{
-            label{}
-            input:first-of-type{}
-            input:last-of-type{}
+        margin: 5rem 0;
+        label{
+            font-style: italic;
+        }
+        input:first-of-type{
+            padding: 0.5rem;
+            border: none;
+            border-radius: 0.2rem;
+            margin-top: 1rem;
+        }
+        input:last-of-type{
+            background-color: var(--color-darkblue);
+            border: none;
+            padding: 0.5rem;
+            border-radius: 0.2rem;
+            color: var(--color-beige);
+            text-transform: uppercase;
         }
     }
     .link-section{
+        margin: 5rem 0;
         nav{
-        ul{li{a{}}}
+        ul{
+            list-style: none;
+            li{
+                padding: 0.3rem;
+                a{
+                    text-decoration: none;
+                    color: var(--color-black);
+                    padding: 1rem;
+                }
+            }
+        }
         }
     }
 
     .contact-section{
+        margin: 5rem 0;
         address{
         a{}
         }
     }
 
     .lower-footer{
-        grid-column: span 3;
-        
-
+        background-color: var(--color-darkblue);
+        flex-basis: 100%;
         ul{
             display: flex;
             list-style: none;
+            align-items: center;
         }
-        li{
-            a{
-                img{
-                    width: 10vw;
-                    aspect-ratio: 2 / 1;
-                }
-            }
+        img{
+            width: 8vw;
+            mix-blend-mode: luminosity;
+            padding: 1rem;
         }
     }
 }

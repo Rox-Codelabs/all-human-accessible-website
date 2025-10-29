@@ -36,12 +36,10 @@
     </header>
 
     <section class="hero-section">
-        <h1>
-            <div>Designing</div>
-            <div>for</div>  
-            <div>recognition</div>
-        </h1>
+        <h1>Designing <br> for <br> recognition</h1>
+        <img src="./assets/camera.png" alt="pictogram van een camera">
         <p>stap in de wereld van beeldherkening</p>
+        <p aria-hidden="true">&#8595; &#8595; &#8595;</p>
     </section>
 
     <form aria-label="Selecteer hieronder alle gewenste filters" class="filter-section" action="/filter-experiments"> <!--aria-label overbodig?-->
@@ -255,8 +253,6 @@
                     </div>
                 </div> 
             </article>
-
-            <button>Meer artikelen tonen</button> <!--geen aria-label nodig want text is genoeg-->
         </section>
     </main>
     
@@ -266,6 +262,7 @@
             <hr>
             <form aria-label="Vul je email in om je in te schrijven voor de nieuwsletter">
                 <label for="email">Abonneer je op onze nieuwsbrief</label>
+                <br>
                 <input id="email" type="email" value="" name="email" placeholder="email address"  required>
                 <input type="submit" value="Subscribe" name="subscribe">  
             </form>
@@ -285,6 +282,7 @@
 
         <section class="contact-section">
             <h4>Contact</h4>
+            <hr>
             <address>
                 Jorgen Karskens | Projectmanager
                 <a href="mailto:j.r.karskens@hva.nl">j.r.karskens@hva.nl</a>
