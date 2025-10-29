@@ -63,6 +63,25 @@ header{
         width: 25vw;
         height: 100vh;
         left: auto;
+
+        ul{
+            list-style: none;
+            padding: 20vh 4vw;
+            li{
+                font-size: 2rem;
+                font-weight: 600;
+                font-family: var(--fontfamily-h1);
+                line-height: 4.5rem;
+                a{
+                    text-decoration: none;
+                    color: var(--color-white);
+                }
+
+                &:nth-last-child(2){
+                    margin-top: 25vh;
+                }
+            }
+        }
     }
 }
 
