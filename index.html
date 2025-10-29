@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designing for recognition</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
+
     <header>
-        <nav aria-label="menu navigatie" class="menu-mobile">
-            <img src="./assets/logo.png" alt="logo van het Civic Interaction Design">
-            <button aria-label="Open menu" aria-expanded="false" onclick="showMenuMobile()">
-                <svg class="icon-open"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round" ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+        <img src="./assets/logo.png" alt="logo van het Civic Interaction Design">
+
+        <button popovertarget="menu" aria-label="Open menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+        </button>
+
+        <nav popover role="menu" id="menu" aria-label="menu navigatie">
+            <button popovertarget="menu" popovertargetaction="hide" aria-label="Open menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
             </button>
+
             <ul>
                 <li><a href="https://humanvaluesforsmartercities.nl//content_types/updates">Nieuws & Updates</a></li>
                 <li><a href="https://humanvaluesforsmartercities.nl//content_types/events">Evenementen</a></li>
                 <li><a href="https://humanvaluesforsmartercities.nl//content_types/academic-output">Academische publicaties</a></li>
                 <li><a href="https://humanvaluesforsmartercities.nl//content_types/professional-output"></a>Professionele prestaties</li>
+
                 <li><a href="https://humanvaluesforsmartercities.nl//content_types/probes-prototypes"></a>Prototypen</li>
                 <li><a href="https://humanvaluesforsmartercities.nl//content_types/student-projects"></a>Studenten Projecten</li>
             </ul>
         </nav>
+
     </header>
 
-
     <section class="hero-section">
-        <h1>Stap in de wereld van beeldherkenning.</h1>
+        <h1>STAP IN DE WERELD VAN <br> BEELDHERKENING</h1>
         <p>Verken ideeën, experimenten en methoden uit Human Values for Smarter Cities, en ontdek hoe ontwerpers menselijke waarden centraal houden in slimme technologie.</p>
     </section>
 
@@ -92,16 +101,17 @@
     
     <main>
         <section class="concept-section">
+            <h3>Section met artikelen</h3>
             <!--Open statistieken delen-->
             <article data-category="evaluating transparency concept" class="concept-card">
-                <img src="./assets/article-img/#1.png" alt="Een minimalistische lijntekening van een computerscherm met een stijgende grafiek, met een toetsenbord en muis ernaast.">
+                <img src="./assets/article-img/1.png" alt="Een minimalistische lijntekening van een computerscherm met een stijgende grafiek, met een toetsenbord en muis ernaast.">
                 <ul class="tags">
                     <li class="evaluating">Evalueren</li>
                     <li class="transparency">Transparantie</li>
                     <li class="concept">Concept</li>
                 </ul>
                 <div class="article-text">
-                    <h3>Statistieken openbaar maken</h3>
+                    <h4>Statistieken openbaar maken</h4>
                     <p>Wat als we die verborgen gegevens zouden vrijgeven—zodat iedereen ze kan bekijken?</p>
                     <a href="./pages/concept-1.html">Lees verder</a>
                     <a href="#">Casestudy</a> 
@@ -110,14 +120,14 @@
 
             <!--Chatten met de handhaver-->
             <article data-category="deployment actionable concept" class="concept-card">
-                <img src="./assets/article-img/#2.png" alt="Een lijntekening van een auto en een smartphone, met spraakballonnen erboven waarin een parkeerbord met de letter P en een vraagteken staan.">
+                <img src="./assets/article-img/2.png" alt="Een lijntekening van een auto en een smartphone, met spraakballonnen erboven waarin een parkeerbord met de letter P en een vraagteken staan.">
                 <ul class="tags">
                     <li class="deployment">Implementatie</li>
                     <li class="actionable">Toepasbaar</li>
                     <li class="concept">Concept</li>
                 </ul>
                 <div class="article-text">
-                    <h3>Praat met de handhaver</h3>
+                    <h4>Praat met de handhaver</h4>
                     <p>Wat als digitale handhavers een helpdesk zouden worden in plaats van alleen maar te wachten op foto’s?</p>
                     <a href="./pages/concept-2.html">Lees verder</a>
                     <a href="#">Casestudy</a>
@@ -126,7 +136,7 @@
 
             <!--Seintje bij het fotograferen-->
             <article data-category="deployment legible concept experiment" class="concept-card">
-                <img src="./assets/article-img/#3.png" alt="Een lijntekening van een auto met een camera boven op het dak die gebruikt wordt voor beeldherkenning. De camera flitst.">
+                <img src="./assets/article-img/3.png" alt="Een lijntekening van een auto met een camera boven op het dak die gebruikt wordt voor beeldherkenning. De camera flitst.">
                 <ul class="tags">
                     <li class="deployment">Implementatie</li>
                     <li class="legible">Leesbaar</li>
@@ -134,7 +144,7 @@
                     <li class="experiment">Experiment</li>
                 </ul>
                 <div class="article-text">
-                    <h3>Het onzichtbare zichtbaar maken</h3>
+                    <h4>Het onzichtbare zichtbaar maken</h4>
                     <p>Wat als camera’s duidelijk het exacte moment zouden aangeven waarop ze een foto maken?</p>
                     <a href="./pages/concept-3.html">Lees verder</a>
                     <a href="#">Casestudy</a> 
@@ -143,14 +153,14 @@
 
             <!--Cameradoos met vorm en richting-->
             <article data-category="deployment legible concept" class="concept-card">
-                <img src="./assets/article-img/#4.png" alt="Een lijntekening van een auto met een camera boven op het dak die gebruikt wordt voor beeldherkenning.">
+                <img src="./assets/article-img/4.png" alt="Een lijntekening van een auto met een camera boven op het dak die gebruikt wordt voor beeldherkenning.">
                 <ul class="tags">
                     <li class="deployment">Implementatie</li>
                     <li class="legible">Leesbaar</li>
                     <li class="concept">Concept</li>
                 </ul>
                 <div class="article-text">
-                    <h3>Het oog van de scanwagen</h3>
+                    <h4>Het oog van de scanwagen</h4>
                     <p>Wat als de camera’s van de scanwagen zichtbaar zouden zijn in plaats van verborgen, waardoor het ‘allesziende oog’ transparant wordt?</p>
                     <a href="./pages/concept-4.html">Lees verder</a>
                     <a href="#">Casestudy</a>  
@@ -159,7 +169,7 @@
 
             <!--Maquette voor de digitale openbare ruimte-->
             <article data-category="articulating relatable concept experiment methode" class="concept-card">
-                <img src="./assets/article-img/#5.jpg" alt="Twee mensen staan voor een raam en praten met een vrouw die aan de andere kant van het raam staat. Naast het raam hangt een infographic over de stad, waarover ze in gesprek zijn.">
+                <img src="./assets/article-img/5.jpg" alt="Twee mensen staan voor een raam en praten met een vrouw die aan de andere kant van het raam staat. Naast het raam hangt een infographic over de stad, waarover ze in gesprek zijn.">
                 <ul class="tags">
                     <li class="articulating">Articuleren</li>
                     <li class="relatable">Herkenbaar</li>
@@ -168,7 +178,7 @@
                     <li class="methode">Methode</li>
                 </ul>
                 <div class="article-text">
-                    <h3>Een digitaal model van de stad</h3>
+                    <h4>Een digitaal model van de stad</h4>
                     <p>Wat als een digitaal model onzichtbare technologie tastbaar zou maken voor de bewoners?</p>
                     <a href="./pages/concept-5.html">Lees verder</a>
                     <a href="#">Casestudy</a>
@@ -178,7 +188,7 @@
 
             <!--Ga de straat op!-->
             <article data-category="making contestable concept experiment methode" class="concept-card">
-                <img src="./assets/article-img/#6.jpg" alt="Op een fietspad bij een stoplicht staat een persoon met een fiets waarop een beeldherkenningsapparaat is bevestigd. De jas van deze persoon geeft duidelijk aan dat zij een fietsers-expert is met een beeldherkenningsapparaat. Ze praat met een andere fietser die ook bij het stoplicht wacht en beantwoordt zijn vragen over de beeldherkenningsfiets.">
+                <img src="./assets/article-img/6.jpg" alt="Op een fietspad bij een stoplicht staat een persoon met een fiets waarop een beeldherkenningsapparaat is bevestigd. De jas van deze persoon geeft duidelijk aan dat zij een fietsers-expert is met een beeldherkenningsapparaat. Ze praat met een andere fietser die ook bij het stoplicht wacht en beantwoordt zijn vragen over de beeldherkenningsfiets.">
                 <ul class="tags">
                     <li class="making">Maken</li>
                     <li class="contestable">Betwistbaar</li>
@@ -187,7 +197,7 @@
                     <li class="methode">Methode</li>
                 </ul>
                 <div class="article-text">
-                    <h3>De straat op!</h3>
+                    <h4>De straat op!</h4>
                     <p>Wat als vroege prototypes de straat op gaan—waardoor feedback het ontwerp beïnvloedt en nieuwe perspectieven opent?</p>
                     <a href="./pages/concept-6.html">Lees verder</a>
                     <a href="#">Casestudy</a>  
@@ -197,7 +207,7 @@
 
             <!--Waardenkaartjes-->
             <article data-category="actionable contestable concept experiment methode" class="concept-card">
-                <img src="./assets/article-img/#7.jpg" alt="Bovenaanzicht van mensen rondom een tafel. Op de tafel liggen kaartjes met waarden en maatschappelijke onderwerpen, bedoeld om de deelnemers met elkaar in discussie te brengen.">
+                <img src="./assets/article-img/7.png" alt="Bovenaanzicht van mensen rondom een tafel. Op de tafel liggen kaartjes met waarden en maatschappelijke onderwerpen, bedoeld om de deelnemers met elkaar in discussie te brengen.">
                 <ul class="tags">
                     <li class="articulating">Articuleren</li>
                     <li class="contestable">Betwistbaar</li>
@@ -206,7 +216,7 @@
                     <li class="methode">Methode</li>
                 </ul>
                 <div class="article-text">
-                    <h3>Waarden op tafel</h3>
+                    <h4>Waarden op tafel</h4>
                     <p>Wat als bewoners publieke waarden letterlijk in handen konden houden—en met waardekaarten technologische voorstellen konden beoordelen?</p>
                     <a href="./pages/concept-7.html">Lees verder</a>
                     <a href="#">Casestudy</a>  
@@ -215,7 +225,7 @@
 
             <!--Menselijke maat bepalen-->
             <article data-category="making actionable concept experiment methode" class="concept-card">
-                <img src="./assets/article-img/#8.jpg" alt="Een auto met open achterklep, met twee mensen erachter. In de achterbak staan twee bakken waarin mensen hun feedback of commentaar kunnen achterlaten.">
+                <img src="./assets/article-img/8.jpg" alt="Een auto met open achterklep, met twee mensen erachter. In de achterbak staan twee bakken waarin mensen hun feedback of commentaar kunnen achterlaten.">
                 <ul class="tags">
                     <li class="making">Maken</li>
                     <li class="actionable">Toepasbaar</li>
@@ -224,7 +234,7 @@
                     <li class="methode">Methode</li>
                 </ul>
                 <div class="article-text">
-                    <h3>The human scale in the algorithm</h3>
+                    <h4>The human scale in the algorithm</h4>
                     <p>Wat als burgers konden meewegen—via quizzen of feedbackrondes—of een boete echt eerlijk is?</p>
                     <a href="./pages/concept-8.html">Lees verder</a>
                     <a href="#">Casestudy</a> 
@@ -269,16 +279,16 @@
         <section class="lower-footer">
             <h4>Partners</h4>
             <ul class="partners">
-                <li><a href="https://www.ams-institute.org/"><img src="./assets/partners/AMS_logo.png" alt="logo AMS"></a></li>
-                <li><a href="https://www.tudelft.nl/"><img src="./assets/partners/TUDelft_logo.png" alt="logo TUDelft"></a></li>
-                <li><a href="https://waag.org/nl/"><img src="./assets/partners/Waag_Logo.png" alt="logo Waag futurelab"></a></li>
-                <li><a href="https://amsterdamdonutcoalitie.nl/organization/6132/gemeente-amsterdam--cto-innovatieteam?deelnemen=true"><img src="./assets/partners/Amsterdam_logo.png" alt="logo Gemeente Amsterdam"></a></li>
-                <li><a href="https://www.rotterdam.nl/"><img src="./assets/partners/Rotterdam_logo.png" alt="logo Gemeente Rotterdam"></a></li>
-                <li><a href="https://www.denhaag.nl/nl/"><img src="./assets/partners/DenHaag_logo.png" alt="logo Gemeente Rotterdam"></a></li>
-                <li><a href="https://arvoo.com/"><img src="./assets/partners/Arvoo_logo.png" alt="logo Arvoo"></a></li>
-                <li><a href="https://www.tapp.nl/"><img src="./assets/partners/Tapp_logo.gif" alt="logo Tapp"></a></li>
-                <li><a href="https://thingscon.org/"><img src="./assets/partners/ThingsCon_logo.png" alt="logo ThingsCon"></a></li>
-                <li><a href="https://mab23.org/"><img src="./assets/partners/MaB_logo.svg" alt="logo Media architecture blennale"></a></li>
+                <li><a href="https://www.ams-institute.org/"><img src="./assets/partner-img/AMS_logo.png" alt="logo AMS"></a></li>
+                <li><a href="https://www.tudelft.nl/"><img src="./assets/partner-img/TUDelft_logo.png" alt="logo TUDelft"></a></li>
+                <li><a href="https://waag.org/nl/"><img src="./assets/partner-img/Waag_Logo.png" alt="logo Waag futurelab"></a></li>
+                <li><a href="https://amsterdamdonutcoalitie.nl/organization/6132/gemeente-amsterdam--cto-innovatieteam?deelnemen=true"><img src="./assets/partner-img/Amsterdam_logo.png" alt="logo Gemeente Amsterdam"></a></li>
+                <li><a href="https://www.rotterdam.nl/"><img src="./assets/partner-img/Rotterdam_logo.png" alt="logo Gemeente Rotterdam"></a></li>
+                <li><a href="https://www.denhaag.nl/nl/"><img src="./assets/partner-img/DenHaag_logo.png" alt="logo Gemeente den haag"></a></li>
+                <li><a href="https://arvoo.com/"><img src="./assets/partner-img/Arvoo_logo.png" alt="logo Arvoo"></a></li>
+                <li><a href="https://www.tapp.nl/"><img src="./assets/partner-img/Tapp_logo.gif" alt="logo Tapp"></a></li>
+                <li><a href="https://thingscon.org/"><img src="./assets/partner-img/ThingsCon_logo.png" alt="logo ThingsCon"></a></li>
+                <li><a href="https://mab23.org/"><img src="./assets/partner-img/MaB_logo.svg" alt="logo Media architecture blennale"></a></li>
             </ul>
         </section> 
     </footer>

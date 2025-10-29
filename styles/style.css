@@ -1,0 +1,322 @@
+/*==========================================================Overall==========================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: var(--color-darkblue);
+}
+
+:root{
+    /*font family*/
+    --fontfamily-h1: Geomanist,Helvetica Neue,Helvetica,sans-serif;
+    --fontfamily-p: Merriweather,Times,Times New Roman,serif;
+
+    /*colors*/
+    --color-darkblue: #0D3951;
+    --color-lightblue: #8BCBBD;
+    --color-beige: #EBDAC4;
+    --color-black: #0A0A0A;
+    --color-white: #F5F5F5;
+}
+
+h3{
+    display: none;
+}
+
+/*==========================================================header==========================================================================*/
+
+header{
+    background-color: var(--color-beige);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: relative;
+
+    img{
+        height: 4.5rem;
+    }
+
+    button{
+        border: none;
+        background-color: var(--color-white);
+        border-radius: 50%;
+        padding: 0.6rem;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 5.5rem;
+        right: 5rem;
+
+        svg{
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+
+    nav{
+        border: none;
+        background: linear-gradient(to bottom, var(--color-darkblue)70%, var(--color-black) 70% );
+        width: 25vw;
+        height: 100vh;
+        left: auto;
+    }
+}
+
+/*==========================================================hero==========================================================================*/
+.hero-section{
+    background-color: var(--color-lightblue);
+    height: 40vh;
+
+    h1{
+        font-family: var(--fontfamily-h1);
+        font-size: 5rem;
+        color: var(--color-darkblue);
+        line-height: 1.4;
+    }
+}
+
+/*==========================================================filters==========================================================================*/
+
+.filter-section{ 
+    background-color: var(--color-beige);
+    width: 100%;
+    max-width: 87vw;
+    margin: auto;
+    padding: 1rem;
+    text-align: right;
+    margin-top: 3rem;
+
+    h2{
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: bold;
+        border: solid black 0.1rem;
+        width: fit-content;
+        padding: 0.2rem;
+    }
+
+    button{
+        background: none;
+        border: none;
+    }
+
+    hr{
+        height: 0.02rem;
+        background-color: var(--color-black);
+    }
+
+    fieldset{
+        text-align: left;
+        all: unset;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem;
+        legend{
+            margin-bottom: 0.2rem;
+            margin-top: 0.5rem;
+        }
+        input{ /*https://developer.mozilla.org/en-US/docs/Web/CSS/:checked*/
+            display: none;
+            &:checked + label{
+                &::after{
+                    content: "⨂";
+                    opacity: 1;
+                    background-color: white;
+                    height: 0.7rem;
+                    width: 0.7rem;
+                    border-radius: 50%;
+                    margin-left: 0.2rem;
+                    margin-top: 0.25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        label{
+            border: 0.1rem solid black;
+            display: flex;
+
+            &::after{
+                content:"";
+                opacity: 0;
+                
+            }
+
+            &[for="concept"]::before{content: "💡";}
+            &[for="experiment"]::before{content: "🧪";}
+            &[for="methode"]::before{content: "📐";}
+            &[for="transparency"]::before{content: "👁️";}
+            &[for="actionable"]::before{content: "✋";}
+            &[for="legible"]::before{content: "📄";}
+            &[for="relatable"]::before{content: "❤️";}
+            &[for="contestable"]::before{content: "⚖️";}
+            &[for="evaluating"]::before{content: "🔍";}
+            &[for="deployment"]::before{content: "🚀";}
+            &[for="articulating"]::before{content: "💬";}
+            &[for="making"]::before{content: "🛠️";}
+        }
+        
+    }
+}
+
+/*==========================================================cards section==========================================================================*/
+
+.concept-section{
+    display: grid;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 88vw;
+    margin: 2rem auto;
+
+    @media (min-width:600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width:800px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (min-width:1500px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    article{
+        align-items: stretch;
+        min-height: 300px;
+        position: relative;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 3 / 2;
+        }
+
+        ul{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            opacity: 0;
+
+            
+
+            li{
+                color: var(--color-black);
+                border: solid black 0.1rem;
+                backdrop-filter: blur(0.5rem);
+
+                display: flex;
+
+                &.evaluating::before{content:"🔍";}
+                &.transparency::before{content:"👁️";}
+                &.concept::before{content:"💡";}
+                &.deployment::before{content:"🚀";}
+                &.actionable::before{content:"✋";}
+                &.legible::before{content:"📄";}
+                &.exeriment::before{content:"🧪";}
+                &.articulating::before{content:"💬";}
+                &.relatable::before{content:"❤️";}
+                &.methode::before{content:"📐";}
+                &.making::before{content:"🛠️";}
+                &.contestable::before{content:"⚖️";}
+            }
+            
+            @media (min-width:600px) {
+                opacity:1;
+            }
+        }
+
+        .article-text{
+            padding: 1rem;
+            aspect-ratio: 3 / 1;
+            p{
+                margin-top: 0.7rem;
+                margin-bottom: 1rem;
+            }
+            a{
+                text-decoration: none;
+            }
+            
+            a:first-of-type{
+                background-color: var(--color-black);
+                color: var(--color-white);
+            }
+            a:last-of-type{
+                background-color: var(--color-white);
+                color: var(--color-black);
+            } 
+        }
+        
+    }
+    button{
+        background: none;
+        border: none;
+        width: 12rem;
+        margin: auto;
+    }
+}
+
+/*==========================================================Footer=========================================================================*/
+footer{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10rem;
+   
+    hr{
+        width: 100%;
+        max-width: 80vw; 
+        margin: auto;
+        background-color: var(--color-black);
+        
+    } 
+
+    h4{
+        font-family: var(--fontfamily-h4);
+    }
+
+    .community-section{
+        form{
+            label{}
+            input:first-of-type{}
+            input:last-of-type{}
+        }
+    }
+    .link-section{
+        nav{
+        ul{li{a{}}}
+        }
+    }
+
+    .contact-section{
+        address{
+        a{}
+        }
+    }
+
+    .lower-footer{
+        grid-column: span 3;
+        
+
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        li{
+            a{
+                img{
+                    width: 10vw;
+                    aspect-ratio: 2 / 1;
+                }
+            }
+        }
+    }
+}
