@@ -33,11 +33,11 @@ header{
     background-color: var(--color-beige);
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 1rem 2.5rem;
     position: relative;
 
     img{
-        height: 4.5rem;
+        height: 3rem;
     }
 
     button{
@@ -48,12 +48,14 @@ header{
         display: flex;
         justify-content: center;
         position: absolute;
-        top: 5.5rem;
-        right: 5rem;
+        top: 3.8rem;
+        right: 4rem;
 
         svg{
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 2rem;
+            height: 2rem;
+            color: var(--color-black);
+            stroke-width: 2.5px;
         }
     }
 
@@ -68,17 +70,17 @@ header{
             list-style: none;
             padding: 20vh 4vw;
             li{
-                font-size: 2rem;
+                font-size: 1.3rem;
                 font-weight: 600;
                 font-family: var(--fontfamily-h1);
-                line-height: 4.5rem;
+                line-height: 3.5rem;
                 a{
                     text-decoration: none;
                     color: var(--color-white);
                 }
 
                 &:nth-last-child(2){
-                    margin-top: 25vh;
+                    margin-top: 15vh;
                 }
             }
         }
@@ -90,7 +92,7 @@ header{
     padding: 6vw;
     h1{
         font-family: var(--fontfamily-h1);
-        font-size: 5rem;
+        font-size: 4rem;
         color: var(--color-darkblue);
         background-color: var(--color-lightblue);
         line-height: 1.4;
@@ -111,7 +113,7 @@ header{
     margin: auto;
     padding: 1rem;
     text-align: right;
-    margin-top: 3rem;
+    border-radius: 5px;
 
     h2{
         font-size: 1.3rem;
@@ -202,11 +204,11 @@ header{
 
 .concept-section{
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     padding: 0 1rem;
     width: 100%;
     max-width: 88vw;
-    margin: 2rem auto;
+    margin: 6rem auto;
 
     @media (min-width:600px) {
         grid-template-columns: 1fr 1fr;
@@ -226,7 +228,10 @@ header{
         img{
             width: 100%;
             object-fit: cover;
-            aspect-ratio: 3 / 2;
+            aspect-ratio: 2 / 1;
+            filter: brightness(85%);
+            display: block;
+            border-radius: 5px 5px 0 0;
         }
 
         ul{
@@ -241,10 +246,10 @@ header{
             opacity: 0;
 
             li{
-                color: var(--color-black);
+                color: var(--color-white);
                 border: solid black 0.1rem;
                 backdrop-filter: blur(0.5rem);
-                background-color: #01010134;
+                background-color: #01010140;
                 border-radius: 5px;
                 padding: 0.1rem 0.3rem;
 
@@ -264,31 +269,49 @@ header{
                 &.contestable::before{content:"⚖️";}
             }
             
-            @media (min-width:600px) {
-                opacity:1;
-            }
+            display: none; /*===ik denk dat dit weg blijft===*/
         }
 
         .article-text{
-            padding: 1rem;
-            aspect-ratio: 3 / 1;
+            padding: 1.2rem;
+            aspect-ratio: 2.3 / 1;
+            background-color: var(--color-lightblue);
+            border-radius: 0 0 5px 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: var(--color-black);
+            h4{
+                font-family: var(--fontfamily-h1);
+                font-size: 1.2rem;
+            }
             p{
                 margin-top: 0.7rem;
-                margin-bottom: 1rem;
+                font-family: var(--fontfamily-h1);
+                line-height: 1.5;
             }
-            a{
-                text-decoration: none;
-            }
-            
-            a:first-of-type{
-                background-color: var(--color-black);
-                color: var(--color-white);
-            }
-            a:last-of-type{
-                background-color: var(--color-white);
-                color: var(--color-black);
-            } 
+            .article-links{
+                margin-top: 1.3rem;
+                a{
+                    text-decoration: none;
+                    border-radius: 7px;
+                    padding: 0.3rem 0.8rem;
+                    font-size: 1.1rem;
+                    font-family: var(--fontfamily-h1);
+                    margin-right: 0.8rem;
+                }
+                a:first-of-type{
+                    background-color: var(--color-darkblue);
+                    color: var(--color-white);
+                }
+                a:last-of-type{
+                    background-color: var(--color-beige);
+                    color: var(--color-black);
+                } 
         }
+        }
+
+        
         
     }
     button{
