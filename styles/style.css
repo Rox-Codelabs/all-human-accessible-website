@@ -37,6 +37,9 @@ header{
 
     img{
         height: 5vw;
+        @media screen and (min-width:1000px){
+            height: 3vw;
+        }
     }
 
     button{
@@ -66,6 +69,10 @@ header{
         @media screen and (min-width: 600px) {
             top: 6.5vw;
         }
+        @media screen and (min-width: 1000px) {
+            top: 4.5vw;
+        }
+
     }
 
     nav{
@@ -76,6 +83,7 @@ header{
         left: auto;
         box-sizing: border-box;
         overflow: hidden;
+        border-left: solid 1px var(--color-beige);
         
         ul{
             list-style: none;
@@ -101,10 +109,6 @@ header{
         @media screen and (min-width: 600px) {
             width: clamp(50vw, 50vw, 90vw);
         }
-
-    @media screen and (min-width: 600px) {
-            
-    }  
     }
 }
 
@@ -136,6 +140,11 @@ header{
         }
         img{
             width: 25vw;
+            @media screen and (min-width:800px){
+                width: 20vw;
+                height: 20vw;
+               align-self: center;
+            }
         }
     }
     
@@ -197,7 +206,7 @@ header{
     border-radius: 5px;
     box-shadow: 0px 20px 26px rgba(0, 0, 0, 0.16);
 
-    h2{
+    button{
         font-size: 1.3rem;
         font-weight: 400;
         font-style: bold;
@@ -207,11 +216,6 @@ header{
         border-radius: 5px;
     }
 
-    button{
-        background: none;
-        border: none;
-        font-size: 1.3rem;
-    }
 
     hr{
         height: 0.02rem;
