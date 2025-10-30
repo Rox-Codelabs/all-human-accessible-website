@@ -291,22 +291,28 @@ header{
     width: 100%;
     max-width: 88vw;
     margin: 6rem auto;
+    align-items: stretch;
 
     @media (min-width:600px) {
         grid-template-columns: 1fr 1fr;
     }
-    @media (min-width:800px) {
+    @media (min-width:1090px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    @media (min-width:1500px) {
+    @media (min-width:1300px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     
     article{
         align-items: stretch;
         min-height: 300px;
         position: relative;
         box-shadow: 0px 20px 26px rgba(0, 0, 0, 0.16);
+        height: 100%; 
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+
         img{
             width: 100%;
             object-fit: cover;
@@ -361,6 +367,7 @@ header{
             flex-direction: column;
             justify-content: space-between;
             color: var(--color-black);
+
             h4{
                 font-family: var(--fontfamily-h1);
                 font-size: 1.2rem;
@@ -372,6 +379,7 @@ header{
             }
             .article-links{
                 margin-top: 1.3rem;
+                display: flex;
                 a{
                     text-decoration: none;
                     border-radius: 7px;
