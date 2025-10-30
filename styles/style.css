@@ -36,7 +36,7 @@ header{
     padding: 1rem 2.5rem;
 
     img{
-        height: 1.5rem;
+        height: 5vw;
     }
 
     button{
@@ -55,6 +55,16 @@ header{
             height: 1rem;
             color: var(--color-black);
             stroke-width: 2.5px;
+            @media screen and (min-width: 600px) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+        @media screen and (min-width: 600px) {
+            top: 7vw;
+        }
+        @media screen and (min-width: 600px) {
+            top: 6.5vw;
         }
     }
 
@@ -91,7 +101,11 @@ header{
         @media screen and (min-width: 600px) {
             width: clamp(50vw, 50vw, 90vw);
         }
-    } 
+
+    @media screen and (min-width: 600px) {
+            
+    }  
+    }
 }
 
 /*==========================================================hero==========================================================================*/
@@ -487,3 +501,10 @@ footer{
         }
     }
 }
+
+
+
+
+
+
+
